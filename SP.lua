@@ -2,25 +2,20 @@
 
 print("Welcome to Spectra Private, if this script has any bugs, report to the Github!")
 
+-- Variables
+MenuName = "Spectra Private"
+MenuVersion = "v1.0.0"
+
 -- The Code
 
 local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/coastified/src.lua"))()
-local Window = Lib:Window("ui lib", "pro haxxx", Enum.KeyCode.RightShift)
-local Test = Window:Tab("Silent Aimbot")
+local Window = Lib:Window(MenuName + " " + MenuVersion, "Spectra", Enum.KeyCode.RightShift)
+local Test = Window:Tab("ESP")
 
-Test:Toggle('Enabled',function(state)
-    print(state)
+Test:Toggle('Enable',function(ESPState)
+    print(ESPState)
 end)
 
-
-Test:Slider('Fov Size',1,200,75,function(Value)
-    print(Value)
-end)
-
-Test:Colorpicker("Color",Color3.fromRGB(0,0,0), function(color)
+Test:Colorpicker("ESP Color",Color3.fromRGB(0,0,0), function(color)
     print(color)
-end)
-
-Test:Dropdown("Part",{'Head',"UpperTorso","HumanoidRootPart","LowerTorso"}, function(objective)
-    print(objective)
 end)
