@@ -1,2 +1,1 @@
-print("hi")
-print("hello")
+print("Welcome to Spectra Private, if this script has any bugs, report to the Github!")
