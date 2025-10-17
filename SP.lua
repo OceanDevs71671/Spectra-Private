@@ -1,12 +1,26 @@
+-- Printing
+
 print("Welcome to Spectra Private, if this script has any bugs, report to the Github!")
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/cat"))() --you can go into the github link and copy all of it and modify it for yourself.
-local Window = Library:CreateWindow("cattoware UI Doc", Vector2.new(492, 598), Enum.KeyCode.RightControl) --you can change your UI keybind
-local AimingTab = Window:CreateTab("Tab 1") --you can rename this tab to whatever you want --you can also change the tabs code, for example "AimingTab" can be changed to "FunnyCoolTab" etc.
+-- The Code
+
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/coastified/src.lua"))()
+local Window = Lib:Window("ui lib", "pro haxxx", Enum.KeyCode.RightShift)
+local Test = Window:Tab("Silent Aimbot")
+
+Test:Toggle('Enabled',function(state)
+    print(state)
+end)
 
 
-local testSection = AimingTab:CreateSector("First Section", "left")  --you can  change the section code, for example "testsection" can be changed to "FunnyCoolSection" etc.
+Test:Slider('Fov Size',1,200,75,function(Value)
+    print(Value)
+end)
 
-testSection:AddToggle("Toggle", false, function(first)
-    print("ejejejejejeje")
+Test:Colorpicker("Color",Color3.fromRGB(0,0,0), function(color)
+    print(color)
+end)
+
+Test:Dropdown("Part",{'Head',"UpperTorso","HumanoidRootPart","LowerTorso"}, function(objective)
+    print(objective)
 end)
