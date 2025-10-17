@@ -9,7 +9,7 @@ MenuVersion = "v1.0.0"
 -- The Code
 
 local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/coastified/src.lua"))()
-local Window = Lib:Window(MenuName + " " + MenuVersion, "Spectra", Enum.KeyCode.RightShift)
+local Window = Lib:Window(MenuName, MenuVersion, Enum.KeyCode.RightShift)
 local Test = Window:Tab("ESP")
 
 Test:Toggle('Enable',function(ESPState)
